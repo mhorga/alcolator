@@ -47,8 +47,9 @@
     // Calls the superclass's implementation
     [super viewDidLoad];
     
-    // Set our primary view's background color to lightGrayColor
+    // Set our primary view's background color and title
     self.view.backgroundColor = [UIColor colorWithRed:.1 green:.8 blue:.6 alpha:1];
+    self.title = NSLocalizedString(@"Wine", @"wine");
     
     // Tells the text field that `self`, this instance of `BLCViewController` should be treated as the text field's delegate
     self.beerPercentTextField.delegate = self;
