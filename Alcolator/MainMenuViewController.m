@@ -30,10 +30,22 @@
     [self.view addSubview:buttonForWhiskey];
     
     // Assign the views and targets to our properties
-    [self.wineButton addTarget:self action:@selector(winePressed:) forControlEvents:UIControlEventTouchUpInside];
     self.wineButton = buttonForWine;
-    [self.whiskeyButton addTarget:self action:@selector(whiskeyPressed:) forControlEvents:UIControlEventTouchUpInside];
+    [self.wineButton addTarget:self action:@selector(winePressed:) forControlEvents:UIControlEventTouchUpInside];
     self.whiskeyButton = buttonForWhiskey;
+    [self.whiskeyButton addTarget:self action:@selector(whiskeyPressed:) forControlEvents:UIControlEventTouchUpInside];
+    
+    buttonForWine.frame = CGRectMake(20, 100, 100, 50);
+    [buttonForWine setTitle:@"Wine" forState:UIControlStateNormal];
+    buttonForWhiskey.frame = CGRectMake(20, 200, 100, 50);
+    [buttonForWhiskey setTitle:@"Whiskey" forState:UIControlStateNormal];
+    
+    self.view.backgroundColor = [UIColor yellowColor];
+}
+
+- (void)viewWillLayoutSubviews {
+    [super viewWillLayoutSubviews];
+    
 }
 
 - (void)viewDidLoad {
