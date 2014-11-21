@@ -17,7 +17,10 @@
 
 @implementation MainMenuViewController
 
-- (void)loadView {
+- (void)viewDidLoad {
+    [super viewDidLoad];
+    // Do any additional setup after loading the view.
+    
     // Allocate and initialize the all-encompassing view
     self.view = [[UIView alloc] init];
     
@@ -34,11 +37,6 @@
     self.wineButton = buttonForWine;
     [self.whiskeyButton addTarget:self action:@selector(whiskeyPressed:) forControlEvents:UIControlEventTouchUpInside];
     self.whiskeyButton = buttonForWhiskey;
-}
-
-- (void)viewDidLoad {
-    [super viewDidLoad];
-    // Do any additional setup after loading the view.
 }
 
 - (void)didReceiveMemoryWarning {
