@@ -31,8 +31,8 @@
     return YES;
 }
 
-- (void)tabBarController:didSelectViewController {
-    NSLog(@"New view controller selected: %@", [didSelectViewController title]);
+- (void)tabBarController:(UITabBarController *)tabBarController didSelectViewController:(UIViewController *)viewController {
+    NSLog(@"New view controller selected: %@", viewController.title);
 }
 
 - (void)applicationWillResignActive:(UIApplication *)application {
